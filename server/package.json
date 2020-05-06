@@ -1,0 +1,27 @@
+{
+  "name": "ShoppingList-MERNstack",
+  "version": "1.0.0",
+  "description": "Shopping List buit with the MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "yarn --cwd client add",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "yarn --cwd client start",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\" ",
+    "heroku-postbuild": "YARN_PRODUCTION=false yarn --cwd client install && yarn --cwd client run build"
+  },
+  "repository": "https://github.com/ivanjulian/ShoppingList-MERNstack.git",
+  "author": "IvanKhizhnyak <vanja.khizhnjak99@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

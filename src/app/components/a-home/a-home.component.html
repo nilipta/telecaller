@@ -1,0 +1,15 @@
+<p>all members are available here</p>
+
+<!-- Each individual memer-->
+<div *ngFor="let item of allOperators; index as i">
+  <div style=" float: left; padding: 0 10px 10px 0;">
+    <div class="card" style="width: 18rem; ">
+        <img class="card-img-top" src="assets/images/male.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"> {{item.name}}  = {{i}}</h5>
+          <p class="card-text"> Load : {{item.load}} </p>
+          <a [routerLink]="['/operator', i]" class="btn btn-primary">Details</a>
+        </div>
+      </div>
+  </div>
+</div>
